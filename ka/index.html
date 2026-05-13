@@ -6,14 +6,14 @@
 
   <title>Jet Ski Batumi | Rent a Jet Ski on the Black Sea from 100 GEL</title>
 
-  <link rel="icon" type="image/jpeg" href="/logo.jpeg">
+  <link rel="icon" type="image/jpeg" href="logo.jpeg">
 
-  <meta name="description" content="ჯეტ სკის და წყლის სკუტერის გაქირავება ბათუმში, მაგნოლიასთან. პრემიუმ სკუტერები 1–2 ადამიანისთვის შავი ზღვის სანაპიროზე. ფასი 100 ლარიდან. დაჯავშნა WhatsApp-ით.">
-  <meta name="keywords" content="ჯეტ სკი ბათუმი, წყლის სკუტერი ბათუმი, ჯეტ სკის გაქირავება ბათუმში, წყლის სკუტერის გაქირავება, ბათუმი ზღვის აქტივობები, ჯეტ სკი მაგნოლია ბათუმი">
+  <meta name="description" content="Jet ski rental in Batumi, Georgia. Premium water scooters for 1–2 people on the Black Sea coast next to Magnolia. Prices from 100 GEL / 10 min. Book via WhatsApp.">
+  <meta name="keywords" content="jet ski batumi, jet ski rental batumi, water scooter batumi, batumi sea activities, black sea jet ski, jet ski magnolia batumi">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Jet Ski Batumi">
 
-  <link rel="canonical" href="https://jetskibatumi.ge/ka/">
+  <link rel="canonical" href="https://jetskibatumi.ge/">
 
   <link rel="alternate" hreflang="en" href="https://jetskibatumi.ge/">
   <link rel="alternate" hreflang="ka" href="https://jetskibatumi.ge/ka/">
@@ -21,16 +21,16 @@
   <link rel="alternate" hreflang="x-default" href="https://jetskibatumi.ge/">
 
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jetskibatumi.ge/ka/">
+  <meta property="og:url" content="https://jetskibatumi.ge/">
   <meta property="og:title" content="Jet Ski Batumi | Rent a Jet Ski on the Black Sea">
-  <meta property="og:description" content="პრემიუმ ჯეტ სკის გაქირავება ბათუმის სანაპიროზე, მაგნოლიასთან. ფასი 100 ლარიდან.">
+  <meta property="og:description" content="Premium jet ski rental on Batumi beach next to Magnolia. From 100 GEL / 10 min. 1–2 people. Book via WhatsApp now.">
   <meta property="og:image" content="https://jetskibatumi.ge/Back.jpg">
   <meta property="og:locale" content="ka_GE">
   <meta property="og:site_name" content="Jet Ski Batumi">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ჯეტ სკი ბათუმი | შავი ზღვის თავგადასავალი">
-  <meta name="twitter:description" content="წყლის სკუტერის გაქირავება ბათუმში 100 ლარიდან. დაჯავშნა WhatsApp-ით.">
+  <meta name="twitter:title" content="Jet Ski Batumi | Black Sea Adventures from 100 GEL">
+  <meta name="twitter:description" content="Premium jet ski rental on Batumi beach. Book via WhatsApp.">
   <meta name="twitter:image" content="https://jetskibatumi.ge/Back.jpg">
 
   <script type="application/ld+json">
@@ -38,15 +38,15 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Jet Ski Batumi",
-    "description": "ჯეტ სკის და წყლის სკუტერის გაქირავება ბათუმის სანაპიროზე, შავი ზღვის სანაპირო, საქართველო. გასეირნება 1–2 ადამიანისთვის 100 ლარიდან.",
-    "url": "https://jetskibatumi.ge/ka/",
+    "description": "Premium jet ski and water scooter rental on the Batumi seafront, Black Sea coast, Georgia. Rides for 1–2 people from 100 GEL.",
+    "url": "https://jetskibatumi.ge/",
     "telephone": "+995557577128",
     "image": "https://jetskibatumi.ge/Back.jpg",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "ბათუმის სანაპირო, მაგნოლიის შენობასთან",
-      "addressLocality": "ბათუმი",
-      "addressRegion": "აჭარა",
+      "streetAddress": "Batumi Seafront, next to Magnolia building",
+      "addressLocality": "Batumi",
+      "addressRegion": "Adjara",
       "postalCode": "6010",
       "addressCountry": "GE"
     },
@@ -73,6 +73,7 @@
     :root {
       --primary: #00eaff;
       --accent: #ff2a6d;
+      --yellow: #ffd60a;
       --dark: #003087;
       --whatsapp: #25D366;
     }
@@ -144,8 +145,13 @@
       transition:0.3s;
     }
 
-    nav a:hover::after { width:100%; }
-    nav a:hover { color:#0077b6; }
+    nav a:hover::after {
+      width:100%;
+    }
+
+    nav a:hover {
+      color:#0077b6;
+    }
 
     .lang-links {
       margin-left: 20px;
@@ -185,7 +191,7 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background: url('/Back.jpg') center/cover no-repeat;
+      background: url('../Back.jpg') center/cover no-repeat;
       will-change: transform;
     }
 
@@ -227,7 +233,10 @@
     }
 
     @keyframes fadeUp {
-      to { opacity:1; transform:translateY(0); }
+      to {
+        opacity:1;
+        transform:translateY(0);
+      }
     }
 
     .reveal {
@@ -271,7 +280,9 @@
       transition:0.35s;
     }
 
-    .btn:hover::after { transform:translateX(100%); }
+    .btn:hover::after {
+      transform:translateX(100%);
+    }
 
     .btn:hover {
       transform:translateY(-6px);
@@ -284,7 +295,9 @@
       box-shadow:0 10px 30px rgba(0,234,255,0.35);
     }
 
-    .btn-primary:hover { background:#00d4e8; }
+    .btn-primary:hover {
+      background:#00d4e8;
+    }
 
     .btn-whatsapp {
       background:var(--whatsapp);
@@ -292,7 +305,9 @@
       box-shadow:0 10px 30px rgba(37,211,102,0.35);
     }
 
-    .btn-whatsapp:hover { background:#1da84e; }
+    .btn-whatsapp:hover {
+      background:#1da84e;
+    }
 
     section {
       padding:100px 5%;
@@ -345,7 +360,9 @@
       transition:transform 0.4s ease;
     }
 
-    .card:hover::before { transform:scaleX(1); }
+    .card:hover::before {
+      transform:scaleX(1);
+    }
 
     .card:hover {
       transform:translateY(-16px);
@@ -450,21 +467,91 @@
       100% { width:70px; height:70px; opacity:0; }
     }
 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    
+
+
     .menu-btn {
       display: none;
-      background: var(--dark);
-      color: white;
+      background: #f0f0f0;
+      color: var(--dark);
       border: none;
       font-size: 26px;
       padding: 8px 14px;
       border-radius: 12px;
       cursor: pointer;
       transition: 0.3s;
-      line-height: 1;
     }
 
-    .menu-btn:hover {
-      background: #0050c8;
+
+    .lang-switcher {
+      position: relative;
+      margin-left: 16px;
+    }
+
+    .lang-btn {
+      background: #f0f0f0;
+      color: var(--dark);
+      border: none;
+      padding: 8px 11px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1;
+      transition: 0.3s;
+      min-width: 44px;
+    }
+
+    .lang-btn:hover {
+      background: var(--primary);
+    }
+
+    .lang-menu {
+      position: absolute;
+      top: calc(100% + 10px);
+      right: 0;
+      min-width: 92px;
+      background: rgba(255,255,255,0.98);
+      backdrop-filter: blur(15px);
+      border-radius: 14px;
+      padding: 8px;
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.14);
+      animation: menuFade 0.25s ease;
+    }
+
+    .lang-menu.active {
+      display: flex;
+    }
+
+    .lang-menu a {
+      text-decoration: none;
+      color: var(--dark);
+      background: #f4fbff;
+      padding: 9px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 800;
+      transition: 0.25s;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .lang-menu a:hover,
+    .lang-menu a.active {
+      background: var(--primary);
     }
 
     @media (max-width:768px) {
@@ -477,14 +564,34 @@
         min-height: 75px;
         padding: 0 5%;
         flex-wrap: nowrap;
+        gap: 8px;
       }
 
       .logo {
-        font-size: 22px;
+        font-size: 20px;
+        margin-right: auto;
       }
 
       .menu-btn {
         display: block;
+        order: 3;
+      }
+
+      .lang-switcher {
+        margin-left: 0;
+        order: 2;
+      }
+
+      .lang-btn {
+        padding: 8px 10px;
+        font-size: 12px;
+        min-width: 40px;
+      }
+
+      .lang-menu {
+        top: calc(100% + 12px);
+        right: 0;
+        min-width: 86px;
       }
 
       .nav-container {
@@ -528,12 +635,6 @@
         display: none;
       }
 
-      .lang-links {
-        margin-left: 0;
-        margin-top: 18px;
-        justify-content: center;
-      }
-
       .hero {
         min-height: 650px;
         padding-top: 75px;
@@ -549,10 +650,20 @@
       }
     }
 
+    @media (min-width:769px) {
+      .menu-btn {
+        display: none;
+      }
+
+      .nav-container {
+        display: flex;
+      }
+    }
+
     @keyframes menuFade {
       from {
         opacity: 0;
-        transform: translateY(-15px);
+        transform: translateY(-12px);
       }
 
       to {
@@ -560,6 +671,7 @@
         transform: translateY(0);
       }
     }
+
   </style>
 </head>
 
@@ -570,8 +682,6 @@
     <a href="#home" class="LogoHome">Jet Ski Batumi</a>
   </div>
 
-  <button class="menu-btn" id="menu-btn" aria-label="Open menu">☰</button>
-
   <div class="nav-container" id="nav-container">
     <nav>
       <a href="#home">მთავარი</a>
@@ -580,13 +690,19 @@
       <a href="#location">ლოკაცია</a>
       <a href="#contact">კონტაქტი</a>
     </nav>
+  </div>
 
-    <div class="lang-links">
+  <div class="lang-switcher">
+    <button class="lang-btn" id="lang-btn" aria-label="ენის არჩევა">GE</button>
+
+    <div class="lang-menu" id="lang-menu">
       <a href="/">🇬🇧</a>
       <a class="active" href="/ka/">🇬🇪</a>
       <a href="/ru/">🇷🇺</a>
     </div>
   </div>
+
+  <button class="menu-btn" id="menu-btn" aria-label="Open navigation menu">☰</button>
 </header>
 
 <section class="hero" id="home">
@@ -594,11 +710,11 @@
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
-    <h1>შეიგრძენი ადრენალინი!</h1>
-    <p>წყლის სკუტერების გაქირავება ბათუმში — შავი ზღვის სანაპიროზე</p>
+    <h1>FEEL THE THRILL!</h1>
+    <p>Jet Ski Rental in Batumi — on the Black Sea Coast</p>
 
     <div class="hero-btns">
-      <a href="tel:+995557577128" class="btn">📞 დაგვირეკე</a>
+      <a href="tel:+995557577128" class="btn">📞 Call Us</a>
       <a href="https://api.whatsapp.com/send/?phone=995557577128" class="btn btn-whatsapp">
         <i class="fab fa-whatsapp"></i> WhatsApp
       </a>
@@ -607,96 +723,96 @@
 </section>
 
 <section id="about">
-  <h2 class="reveal">წყლის სკუტერები ბათუმში — ნამდვილი ადრენალინი გელოდებათ</h2>
+  <h2 class="reveal">Real Adrenaline Awaits You on the Black Sea</h2>
 
   <p class="section-desc reveal reveal-d1">
-    Jet Ski Batumi გთავაზობთ სწრაფ და ძლიერ წყლის სკუტერებს ბათუმის სანაპიროზე, მაგნოლიის შენობასთან ახლოს.
-    თითოეული სკუტერი განკუთვნილია 1–2 ადამიანისთვის. გამოცდილება არ არის საჭირო — გასეირნებამდე მიიღებთ ინსტრუქტაჟს და უსაფრთხოების აღჭურვილობას.
+    Jet Ski Batumi offers fast, powerful water scooters right on the Batumi seafront, near the Magnolia building.
+    Each scooter fits 1–2 people — no experience needed. We provide full safety equipment and a detailed briefing before every ride.
   </p>
 
   <div class="cards">
     <div class="card reveal reveal-d1">
-      <h3>🌊 საზღვაო გასეირნება</h3>
-      <p>ბათუმის სანაპიროს გასწვრივ, შავ ზღვაზე</p>
+      <h3>🌊 Sea Rides</h3>
+      <p>Along the Batumi coastline on the Black Sea</p>
     </div>
 
     <div class="card reveal reveal-d2">
-      <h3>🏔️ საოცარი ხედები</h3>
-      <p>მთისა და ზღვის შერწყმა — მხოლოდ ბათუმში</p>
+      <h3>🏔️ Stunning Views</h3>
+      <p>Mountains meet the sea — only in Batumi</p>
     </div>
 
     <div class="card reveal reveal-d3">
-      <h3>⚡ სისწრაფე და ემოცია</h3>
-      <p>ადრენალინი და დაუვიწყარი შეგრძნებები ყველასთვის</p>
+      <h3>⚡ Speed & Emotion</h3>
+      <p>Adrenaline for everyone</p>
     </div>
 
     <div class="card reveal reveal-d4">
-      <h3>📸 მოგონებები</h3>
-      <p>შეძლებთ დააფიქსიროთ თქვენი საუკეთესო მომენტები ზღვაზე.</p>
+      <h3>📸 Memories</h3>
+      <p>You’ll be able to capture the best moments.</p>
     </div>
   </div>
 </section>
 
 <section id="fleet" style="background:#f0f8ff;">
-  <h2 class="reveal">წყლის სკუტერის ფასები ბათუმში</h2>
+  <h2 class="reveal">Jet Ski Packages in Batumi</h2>
 
   <p class="section-desc reveal reveal-d1">
-    აირჩიეთ თქვენთვის სასურველი პაკეტი და მიიღეთ საუკეთესო გამოცდილება ზღვაზე.
-    ყველა სკუტერი გათვლილია 1–2 ადამიანზე. უსაფრთხოების ჟილეტები შედის ფასში.
-    გამოცდილება არ გჭირდებათ — ყველაფერს ადგილზე აგიხსნით.
+    Pick the package that’s right for you and get the best experience on the water.
+    All scooters fit 1–2 people. Safety vests are included in the price.
+    No experience required — we’ll explain everything on the spot.
   </p>
 
   <div class="cards">
     <div class="card reveal reveal-d1">
-      <h3>სწრაფი გასეირნება</h3>
-      <p>სწრაფი და ენერგიული გამოცდილება — იდეალურია პირველად ცდისთვის.</p>
-      <div class="price">100 ლარი / 10 წთ</div>
-      <a href="https://api.whatsapp.com/send/?phone=995557577128" class="btn" style="width:100%;">დაჯავშნა</a>
+      <h3>Quick Ride</h3>
+      <p>A fast and energetic experience — perfect for a first try.</p>
+      <div class="price">100 GEL / 10 Min</div>
+      <a href="https://api.whatsapp.com/send/?phone=995557577128" class="btn" style="width:100%;">Book Now</a>
     </div>
 
     <div class="card reveal reveal-d2">
-      <h3>სტანდარტული გამოცდილება</h3>
-      <p>საკმარისი დრო სიჩქარის შესაგრძნობად და მანევრების საცდელად.</p>
-      <div class="price">190 ლარი / 20 წთ</div>
-      <a href="https://api.whatsapp.com/send/?phone=995557577128" class="btn" style="width:100%;">დაჯავშნა</a>
+      <h3>Standard Experience</h3>
+      <p>Enough time to feel the speed and practice some maneuvers.</p>
+      <div class="price">190 GEL / 20 Min</div>
+      <a href="https://api.whatsapp.com/send/?phone=995557577128" class="btn" style="width:100%;">Book Now</a>
     </div>
 
     <div class="card reveal reveal-d3">
-      <h3>სრული ადრენალინი</h3>
-      <p>მეტი დრო უკეთესი კონტროლისთვის და ძლიერი ემოციებისთვის ზღვაზე.</p>
-      <div class="price">270 ლარი / 30 წთ</div>
-      <a href="https://api.whatsapp.com/send/?phone=995557577128" class="btn" style="width:100%;">დაჯავშნა</a>
+      <h3>Full Adrenaline</h3>
+      <p>More time for real control and serious thrills on the water.</p>
+      <div class="price">270 GEL / 30 Min</div>
+      <a href="https://api.whatsapp.com/send/?phone=995557577128" class="btn" style="width:100%;">Book Now</a>
     </div>
 
     <div class="card reveal reveal-d4">
-      <h3>მაქსიმალური სესია</h3>
-      <p>სრული თავგადასავალი — მაქსიმალური დრო სიჩქარისა და ემოციებისთვის შავ ზღვაზე.</p>
-      <div class="price">500 ლარი / 1 სთ</div>
-      <a href="https://api.whatsapp.com/send/?phone=995557577128" class="btn" style="width:100%;">დაჯავშნა</a>
+      <h3>Maximum Session</h3>
+      <p>The ultimate ride — maximum time for speed and adventure on the Black Sea.</p>
+      <div class="price">500 GEL / 1 Hour</div>
+      <a href="https://api.whatsapp.com/send/?phone=995557577128" class="btn" style="width:100%;">Book Now</a>
     </div>
   </div>
 </section>
 
 <section id="location">
-  <h2 class="reveal">ჩვენი ლოკაცია — ბათუმის სანაპირო, მაგნოლიასთან</h2>
+  <h2 class="reveal">Our Location — Batumi Seafront, near Magnolia</h2>
 
   <p class="section-desc reveal reveal-d1">
-    Jet Ski Batumi მდებარეობს ბათუმის სანაპიროზე, მაგნოლიის შენობასთან ახლოს.
-    მოსაძებნად მარტივია — მიდით მაგნოლიასთან და სანაპიროზე შეგვამჩნევთ.
+    Jet Ski Batumi is located on the Batumi seafront, right next to the Magnolia building.
+    Easy to find — just head to Magnolia and you’ll spot us right there on the beach.
   </p>
 
   <div class="map-container reveal reveal-d2">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.454899755156!2d41.6165667!3d41.645912499999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40678557d1ab06e7%3A0xaf4e5d02931aa38c!2sBatumi%20water%20sports%20-%20jetski!5e0!3m2!1sru!2sge!4v1776797739811!5m2!1sru!2sge" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Jet Ski Batumi ლოკაცია მაგნოლიასთან Google Maps-ზე"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.454899755156!2d41.6165667!3d41.645912499999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40678557d1ab06e7%3A0xaf4e5d02931aa38c!2sBatumi%20water%20sports%20-%20jetski!5e0!3m2!1sru!2sge!4v1776797739811!5m2!1sru!2sge" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Jet Ski Batumi location next to Magnolia on Google Maps"></iframe>
   </div>
 </section>
 
 <section id="contact" class="cta">
   <span class="cta-deco">🚤</span>
 
-  <h2 class="reveal">მზად ხართ საუკეთესო ემოციებისთვის?</h2>
+  <h2 class="reveal">Ready for the Best Experience?</h2>
 
   <p style="font-size:1.5rem; margin:30px 0;" class="reveal reveal-d1">
-    დაჯავშნეთ მარტივად — დაგვირეკეთ ან მოგვწერეთ WhatsApp-ზე!
+    Book easily — call us or message us on WhatsApp!
   </p>
 
   <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px;" class="reveal reveal-d2">
@@ -707,28 +823,28 @@
     </a>
 
     <a href="https://maps.app.goo.gl/B8B77ukJizFkQzbr6" target="_blank" class="btn btn-primary" style="margin:0;">
-      <i class="fas fa-location-arrow"></i> მარშრუტი
+      <i class="fas fa-location-arrow"></i> Get Directions
     </a>
   </div>
 </section>
 
 <footer>
   <div class="social">
-    <a href="https://www.facebook.com/share/1JUchXcqQY/" target="_blank" aria-label="Jet Ski Batumi Facebook">
+    <a href="https://www.facebook.com/share/1JUchXcqQY/" target="_blank" aria-label="Jet Ski Batumi on Facebook">
       <i class="fab fa-facebook"></i>
     </a>
 
-    <a href="https://www.instagram.com/batumijetski/" target="_blank" aria-label="Jet Ski Batumi Instagram">
+    <a href="https://www.instagram.com/batumijetski/" target="_blank" aria-label="Jet Ski Batumi on Instagram">
       <i class="fab fa-instagram"></i>
     </a>
 
-    <a href="https://api.whatsapp.com/send/?phone=995557577128" target="_blank" aria-label="Jet Ski Batumi WhatsApp">
+    <a href="https://api.whatsapp.com/send/?phone=995557577128" target="_blank" aria-label="Contact Jet Ski Batumi on WhatsApp">
       <i class="fab fa-whatsapp"></i>
     </a>
   </div>
 
   <p style="margin-top:40px; opacity:0.9;">
-    © 2026 Jet Ski Batumi • ბათუმი, საქართველო | ჯეტ სკის და წყლის სკუტერის გაქირავება შავ ზღვაზე
+    © 2026 Jet Ski Batumi • Batumi, Georgia | Jet Ski & Water Scooter Rental on the Black Sea
   </p>
 </footer>
 
@@ -772,29 +888,77 @@
 </script>
 
 
+
 <script>
   const menuBtn = document.getElementById('menu-btn');
   const navContainer = document.getElementById('nav-container');
+  const langBtn = document.getElementById('lang-btn');
+  const langMenu = document.getElementById('lang-menu');
 
-  menuBtn.addEventListener('click', () => {
-    navContainer.classList.toggle('active');
+  if (menuBtn && navContainer) {
+    menuBtn.addEventListener('click', (event) => {
+      event.stopPropagation();
 
-    if (navContainer.classList.contains('active')) {
-      menuBtn.innerHTML = '✕';
-      menuBtn.setAttribute('aria-label', 'Close menu');
-    } else {
+      navContainer.classList.toggle('active');
+
+      if (langMenu) {
+        langMenu.classList.remove('active');
+      }
+
+      if (navContainer.classList.contains('active')) {
+        menuBtn.innerHTML = '✕';
+        menuBtn.setAttribute('aria-label', 'Close navigation menu');
+      } else {
+        menuBtn.innerHTML = '☰';
+        menuBtn.setAttribute('aria-label', 'Open navigation menu');
+      }
+    });
+
+    document.querySelectorAll('.nav-container a').forEach(link => {
+      link.addEventListener('click', () => {
+        navContainer.classList.remove('active');
+        menuBtn.innerHTML = '☰';
+        menuBtn.setAttribute('aria-label', 'Open navigation menu');
+      });
+    });
+  }
+
+  if (langBtn && langMenu) {
+    langBtn.addEventListener('click', (event) => {
+      event.stopPropagation();
+
+      langMenu.classList.toggle('active');
+
+      if (navContainer) {
+        navContainer.classList.remove('active');
+      }
+
+      if (menuBtn) {
+        menuBtn.innerHTML = '☰';
+        menuBtn.setAttribute('aria-label', 'Open navigation menu');
+      }
+    });
+  }
+
+  document.addEventListener('click', () => {
+    if (langMenu) {
+      langMenu.classList.remove('active');
+    }
+
+    if (navContainer && menuBtn) {
+      navContainer.classList.remove('active');
       menuBtn.innerHTML = '☰';
-      menuBtn.setAttribute('aria-label', 'Open menu');
+      menuBtn.setAttribute('aria-label', 'Open navigation menu');
     }
   });
 
-  document.querySelectorAll('.nav-container a').forEach(link => {
-    link.addEventListener('click', () => {
-      navContainer.classList.remove('active');
-      menuBtn.innerHTML = '☰';
-      menuBtn.setAttribute('aria-label', 'Open menu');
-    });
-  });
+  if (navContainer) {
+    navContainer.addEventListener('click', event => event.stopPropagation());
+  }
+
+  if (langMenu) {
+    langMenu.addEventListener('click', event => event.stopPropagation());
+  }
 </script>
 
 </body>
