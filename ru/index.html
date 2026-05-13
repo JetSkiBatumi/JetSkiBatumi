@@ -145,30 +145,7 @@
 
     nav a:hover::after { width:100%; }
     nav a:hover { color:#0077b6; }
-
-    .lang-links {
-      margin-left: 20px;
-      display: flex;
-      gap: 8px;
-    }
-
-    .lang-links a {
-      text-decoration: none;
-      color: var(--dark);
-      background: #f0f0f0;
-      padding: 8px 10px;
-      border-radius: 10px;
-      font-size: 13px;
-      font-weight: 800;
-      transition: 0.3s;
-    }
-
-    .lang-links a:hover,
-    .lang-links a.active {
-      background: var(--primary);
-    }
-
-    .hero {
+.hero {
       height: 100vh;
       min-height: 700px;
       position: relative;
@@ -449,21 +426,83 @@
       100% { width:70px; height:70px; opacity:0; }
     }
 
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     .menu-btn {
       display: none;
-      background: var(--dark);
-      color: white;
+      background: #f0f0f0;
+      color: var(--dark);
       border: none;
       font-size: 26px;
       padding: 8px 14px;
       border-radius: 12px;
       cursor: pointer;
       transition: 0.3s;
-      line-height: 1;
     }
 
-    .menu-btn:hover {
-      background: #0050c8;
+    .lang-switcher {
+      position: relative;
+      margin-left: 16px;
+    }
+
+    .lang-btn {
+      background: #f0f0f0;
+      color: var(--dark);
+      border: none;
+      padding: 8px 11px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1;
+      transition: 0.3s;
+      min-width: 44px;
+    }
+
+    .lang-btn:hover {
+      background: var(--primary);
+    }
+
+    .lang-menu {
+      position: absolute;
+      top: calc(100% + 10px);
+      right: 0;
+      min-width: 92px;
+      background: rgba(255,255,255,0.98);
+      backdrop-filter: blur(15px);
+      border-radius: 14px;
+      padding: 8px;
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.14);
+      animation: menuFade 0.25s ease;
+    }
+
+    .lang-menu.active {
+      display: flex;
+    }
+
+    .lang-menu a {
+      text-decoration: none;
+      color: var(--dark);
+      background: #f4fbff;
+      padding: 9px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 800;
+      transition: 0.25s;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .lang-menu a:hover,
+    .lang-menu a.active {
+      background: var(--primary);
     }
 
     @media (max-width:768px) {
@@ -476,14 +515,34 @@
         min-height: 75px;
         padding: 0 5%;
         flex-wrap: nowrap;
+        gap: 8px;
       }
 
       .logo {
-        font-size: 22px;
+        font-size: 20px;
+        margin-right: auto;
       }
 
       .menu-btn {
         display: block;
+        order: 3;
+      }
+
+      .lang-switcher {
+        margin-left: 0;
+        order: 2;
+      }
+
+      .lang-btn {
+        padding: 8px 10px;
+        font-size: 12px;
+        min-width: 40px;
+      }
+
+      .lang-menu {
+        top: calc(100% + 12px);
+        right: 0;
+        min-width: 86px;
       }
 
       .nav-container {
@@ -527,12 +586,6 @@
         display: none;
       }
 
-      .lang-links {
-        margin-left: 0;
-        margin-top: 18px;
-        justify-content: center;
-      }
-
       .hero {
         min-height: 650px;
         padding-top: 75px;
@@ -548,10 +601,20 @@
       }
     }
 
+    @media (min-width:769px) {
+      .menu-btn {
+        display: none;
+      }
+
+      .nav-container {
+        display: flex;
+      }
+    }
+
     @keyframes menuFade {
       from {
         opacity: 0;
-        transform: translateY(-15px);
+        transform: translateY(-12px);
       }
 
       to {
@@ -559,6 +622,7 @@
         transform: translateY(0);
       }
     }
+
   </style>
 </head>
 
@@ -569,8 +633,6 @@
     <a href="#home" class="LogoHome">Jet Ski Batumi</a>
   </div>
 
-  <button class="menu-btn" id="menu-btn" aria-label="Open menu">☰</button>
-
   <div class="nav-container" id="nav-container">
     <nav>
       <a href="#home">Главная</a>
@@ -579,13 +641,19 @@
       <a href="#location">Локация</a>
       <a href="#contact">Контакты</a>
     </nav>
+  </div>
 
-    <div class="lang-links">
-      <a href="/">🇬🇧</a>
-      <a href="/ka/">🇬🇪</a>
-      <a class="active" href="/ru/">🇷🇺</a>
+  <div class="lang-switcher">
+    <button class="lang-btn" id="lang-btn" aria-label="Выбор языка">RU</button>
+
+    <div class="lang-menu" id="lang-menu">
+      <a href="/">EN</a>
+      <a href="/ka/">GE</a>
+      <a class="active" href="/ru/">RU</a>
     </div>
   </div>
+
+  <button class="menu-btn" id="menu-btn" aria-label="Open navigation menu">☰</button>
 </header>
 
 <section class="hero" id="home">
@@ -771,20 +839,29 @@
 </script>
 
 
+
 <script>
   const menuBtn = document.getElementById('menu-btn');
   const navContainer = document.getElementById('nav-container');
+  const langBtn = document.getElementById('lang-btn');
+  const langMenu = document.getElementById('lang-menu');
 
   if (menuBtn && navContainer) {
-    menuBtn.addEventListener('click', () => {
+    menuBtn.addEventListener('click', (event) => {
+      event.stopPropagation();
+
       navContainer.classList.toggle('active');
+
+      if (langMenu) {
+        langMenu.classList.remove('active');
+      }
 
       if (navContainer.classList.contains('active')) {
         menuBtn.innerHTML = '✕';
-        menuBtn.setAttribute('aria-label', 'Close menu');
+        menuBtn.setAttribute('aria-label', 'Close navigation menu');
       } else {
         menuBtn.innerHTML = '☰';
-        menuBtn.setAttribute('aria-label', 'Open menu');
+        menuBtn.setAttribute('aria-label', 'Open navigation menu');
       }
     });
 
@@ -792,9 +869,46 @@
       link.addEventListener('click', () => {
         navContainer.classList.remove('active');
         menuBtn.innerHTML = '☰';
-        menuBtn.setAttribute('aria-label', 'Open menu');
+        menuBtn.setAttribute('aria-label', 'Open navigation menu');
       });
     });
+  }
+
+  if (langBtn && langMenu) {
+    langBtn.addEventListener('click', (event) => {
+      event.stopPropagation();
+
+      langMenu.classList.toggle('active');
+
+      if (navContainer) {
+        navContainer.classList.remove('active');
+      }
+
+      if (menuBtn) {
+        menuBtn.innerHTML = '☰';
+        menuBtn.setAttribute('aria-label', 'Open navigation menu');
+      }
+    });
+  }
+
+  document.addEventListener('click', () => {
+    if (langMenu) {
+      langMenu.classList.remove('active');
+    }
+
+    if (navContainer && menuBtn) {
+      navContainer.classList.remove('active');
+      menuBtn.innerHTML = '☰';
+      menuBtn.setAttribute('aria-label', 'Open navigation menu');
+    }
+  });
+
+  if (navContainer) {
+    navContainer.addEventListener('click', event => event.stopPropagation());
+  }
+
+  if (langMenu) {
+    langMenu.addEventListener('click', event => event.stopPropagation());
   }
 </script>
 
